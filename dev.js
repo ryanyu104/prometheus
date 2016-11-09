@@ -10,6 +10,7 @@ const options = {
   themeTemplate: 'default'
 }
 
+
 dirs.forEach((item) => {
   const inputFolder = mdPath + item
   const outFolder = htmlPath + item
