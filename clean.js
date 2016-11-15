@@ -3,4 +3,8 @@ const fs = require('fs')
 const dirs = fs.readdirSync(htmlPath)
 const del = require('del')
 
-del(['dirs'])
+dirs.forEach((item) => {
+  del([htmlPath + item]).then(paths => {
+    console.log(paths)
+  })
+})
