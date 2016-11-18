@@ -18,8 +18,8 @@ dirs.forEach((item) => {
   makeDir(outFolder)
 
   filesArr.forEach((file) => {
-    const fileName = file.replace('.apib', '')
-    const inputFile = `${inputFolder}/${fileName}.apib`
+    const fileName = file.replace('.md', '')
+    const inputFile = `${inputFolder}/${fileName}.md`
     const outFile = `${outFolder}/${fileName}.html`
     aglio.renderFile(inputFile, outFile, options, (error) => {
       if (error) return console.log(error)

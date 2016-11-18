@@ -20,7 +20,12 @@ API Blueprint** and as such you can **parse** it with the
 + [This: Raw API Blueprint](https://raw.github.com/apiaryio/api-blueprint/master/examples/01.%20Simplest%20API.md)
 + [Next: Resource and Actions](02.%20Resource%20and%20Actions.md)
 
-# GET /setting
+# GET /message
 + Response 200 (text/plain)
 
         Hello World!
+
+# PUT /message1
++ Response 200 (text/plain)
+
+        Hello Worldput!

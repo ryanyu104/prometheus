@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "node dev.js",
     "clean": "node clean.js",
-    "test": "node test.js"
+    "test": "node test.js",
+    "mock": "node mock.js"
   },
   "dependencies": {
     "aglio": "^2.2.1",
     "api-mock": "^0.3.2",
     "del": "^2.2.2",
+    "drakov": "^1.0.1",
     "protagonist": "^1.6.0"
   }
 }
