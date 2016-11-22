@@ -34,15 +34,18 @@ Lists all the things from the API
                 }
             ]
 
+
+## Things [/api/things2]
+
 ### Create a new thing [POST]
 
 + Request (application/json)
-Create a new thing
 
     + Body
 
             {
-                "text": "Hyperspeed jet"
+              "email": "testuser@testuser.com",
+              "password": "password"
             }
 
 + Response 200 (application/json;charset=UTF-8)
@@ -54,6 +57,7 @@ Create a new thing
                 "id": "1"
             }
 
+## Things [/api/things3]
 ### Allow cross site origin [OPTIONS]
 
 + Response 200

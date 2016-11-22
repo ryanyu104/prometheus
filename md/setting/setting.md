@@ -1,26 +1,61 @@
 FORMAT: 1A
 
-# The Simplest API
-This is one of the simplest APIs written in the **API Blueprint**. One plain
-resource combined with a method and that's it! We will explain what is going on
-in the next installment -
-[Resource and Actions](02.%20Resource%20and%20Actions.md).
+# Return all the things
+Lists all the things from the API
 
-**Note:** As we progress through the examples, do not also forget to view the
-[Raw](https://raw.github.com/apiaryio/api-blueprint/master/examples/01.%20Simplest%20API.md)
-code to see what is really going on in the API Blueprint, as opposed to just
-seeing the output of the Github Markdown parser.
+## Things [/headers]
 
-Also please keep in mind that every single example in this course is a **real
-API Blueprint** and as such you can **parse** it with the
-[API Blueprint parser](https://github.com/apiaryio/drafter) or one of its
-[bindings](https://github.com/apiaryio/drafter#bindings).
+### Retrieve a dummy object [GET]
+Check Authorization header
 
-## API Blueprint
-+ [This: Raw API Blueprint](https://raw.github.com/apiaryio/api-blueprint/master/examples/01.%20Simplest%20API.md)
-+ [Next: Resource and Actions](02.%20Resource%20and%20Actions.md)
++ Request
 
-# GET /setting
-+ Response 200 (text/plain)
+    + Headers
 
-        Hello World2!
+            Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+
++ Response 200
+
++ Request
+
+    + Headers
+
+            Authorization: Basic foo
+
++ Response 401
+
+### Delete a dummy object [DELETE]
+Respond to deletion of object
+
++ Response 200
+
+## Things [/things]
+
+### Retrieve all the things with no header [GET]
+
++ Response 200 (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+              "header":"absent"
+            }
+
++ Request JSON Message
+
+    + Headers
+
+            content-type: application/json
+
+
++ Response 200
+
+    + Headers
+
+            content-type: application/json;charset=UTF-8
+
+    + Body
+
+            {
+                 "header":"json"
+            }

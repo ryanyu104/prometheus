@@ -23,9 +23,13 @@ API Blueprint** and as such you can **parse** it with the
 # GET /message
 + Response 200 (text/plain)
 
-        Hello World!
+        {
+          "header":"hello world"
+        }
 
 # PUT /message1
 + Response 200 (text/plain)
 
-        Hello Worldput!
+        {
+          "header":"hello worldput"
+        }
