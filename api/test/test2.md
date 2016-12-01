@@ -7,33 +7,28 @@ Lists all the things from the API
 
 ### Retrieve all the things [GET]
 
++ Response 200 (application/json)
+    + attributes
+        + id: 123 (number)
+
+
+## Things [/api/things2]
+
+### Create a new thing [POST]
+
++ Request (application/json)
+    + attributes
+        + email: '' (string)
+        + password: 'password' (string)
+
 + Response 200 (application/json;charset=UTF-8)
 
     + Body
 
-            [
-               {
-                  "text":"Zip2",
-                  "id": "1"
-                },
-               {
-                  "text":"X.com",
-                  "id": "2"
-                },
-               {
-                  "text":"SpaceX",
-                  "id": "3"
-                },
-               {
-                  "text":"Solar City",
-                  "id": "4"
-                },
-               {
-                  "text":"Hyperloop",
-                  "id": "5"
-                }
-            ]
-
+            {
+                "text": "",
+                "id": "1"
+            }
 
 ## Things [/api/things2]
 
@@ -44,7 +39,7 @@ Lists all the things from the API
     + Body
 
             {
-              "email": "testuser@testuser.com",
+              "email": "123",
               "password": "password"
             }
 
@@ -53,7 +48,7 @@ Lists all the things from the API
     + Body
 
             {
-                "text": "Hyperspeed jet",
+                "text": "123",
                 "id": "1"
             }
 
@@ -64,24 +59,6 @@ Lists all the things from the API
     + Headers
 
             Access-Control-Allow-Origin: custom-domain.com
-
-## Things [/api/things/{thingId}]
-
-+ Parameters
-    + thingId (string, `12345`) ... ID of the desired thing.
-
-### Retrieve all a thing by it's id [GET]
-
-+ Response 200 (application/json;charset=UTF-8)
-
-    + Body
-
-            [
-                {
-                   "text":"Zip2",
-                   "id": "1"
-                }
-            ]
 
 ### Update thing by it's id [POST]
 
@@ -117,6 +94,9 @@ Update the text of the thing
 
             { "like": true }
 
+### Register a like on a thing [DELETE]
+
++ Response 204
 
 ## Things undefined charset [/api/charsetless]
 
