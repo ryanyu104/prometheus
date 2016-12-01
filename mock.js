@@ -1,18 +1,13 @@
-var drakovMiddleware = require('drakov').middleware
-var express = require('express')
-var app = express()
+var drakov = require('drakov')
+var watcher = require('drakov/lib/watcher')
 
-var argv = {
-  sourceFiles: './md/**/*.md',
+var options  = {
+  sourceFiles: './api/**/*.md',
+  serverPort: 3000,
+  watch: true,
+  discover: false,
 }
 
-drakovMiddleware.init(app, argv, function(err, middlewareFunction) {
-  if (err) {
-    throw err
-  }
-  app.use(middlewareFunction)
-  app.listen(3000, function() {
-    console.log('success')
-  })
-});
-
+drakov.run(options, function(err){
+  watcher(options)
+})
