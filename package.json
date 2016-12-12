@@ -3,15 +3,20 @@
   "description": "api",
   "private": true,
   "scripts": {
-    "dev": "node dev.js",
-    "clean": "node clean.js",
-    "mock": "node mock.js"
+    "start": "npm run gulp",
+    "mock": "gulp mock",
+    "render": "gulp render",
+    "clean": "gulp clean.js",
+    "gulp": "./node_modules/gulp-cli/bin/gulp.js"
   },
   "dependencies": {
-    "aglio": "^2.2.1",
-    "api-mock": "^0.3.2",
-    "del": "^2.2.2",
-    "drakov": "^1.0.1",
-    "protagonist": "^1.6.0"
+    "aglio": "2.2.1",
+    "colors": "1.1.2",
+    "del": "2.2.2",
+    "drakov": "1.0.1",
+    "express": "4.14.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-aglio": "0.0.10",
+    "gulp-cli": "1.2.2"
   }
 }

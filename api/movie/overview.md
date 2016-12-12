@@ -9,7 +9,7 @@ FORMAT: 1A
 
 + Request (application/json)
     + attributes
-        + ddd: '123' (string)
+        + id: 12 (string)
 
 + Response 200 (application/json)
     + attributes
@@ -20,7 +20,7 @@ FORMAT: 1A
             + trend (object) - `返回数目：上映日到今天的实时数据 + 未来 5 天的预售数据，`
                 + boxoffice
                   + date: `2015-01-10`, `2015-01-1` (array)
-                  + data: 2222, 3131 (array)
+                  + data: 222, 3131 (array)
                   + presell: (object) - 如果没有预售数据 presell: null
                       + date: '2015-01-10', '2015-01-1' (array)
                       + data: 2222, 3131 (array)

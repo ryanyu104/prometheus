@@ -1,13 +1,9 @@
-var drakov = require('drakov')
-var watcher = require('drakov/lib/watcher')
+const drakov = require('./drakov/index')
+const watcher = require('./drakov/watcher')
+const options = require('./config').drakovOptions
 
-var options  = {
-  sourceFiles: './api/**/*.md',
-  serverPort: 3000,
-  watch: true,
-  discover: false,
+module.exports = function mock() {
+  drakov.run(options, () => {
+    watcher(options)
+  })
 }
-
-drakov.run(options, function(err){
-  watcher(options)
-})
