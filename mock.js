@@ -1,18 +1,9 @@
-var drakovMiddleware = require('drakov').middleware
-var express = require('express')
-var app = express()
+const drakov = require('./drakov/index')
+const watcher = require('./drakov/watcher')
+const options = require('./config').drakovOptions
 
-var argv = {
-  sourceFiles: './md/**/*.md',
-}
-
-drakovMiddleware.init(app, argv, function(err, middlewareFunction) {
-  if (err) {
-    throw err
-  }
-  app.use(middlewareFunction)
-  app.listen(3000, function() {
-    console.log('success')
+module.exports = function mock() {
+  drakov.run(options, () => {
+    watcher(options)
   })
-});
-
+}

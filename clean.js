@@ -1,10 +1,9 @@
-const htmlPath = 'html/'
-const fs = require('fs')
-const dirs = fs.readdirSync(htmlPath)
 const del = require('del')
 
-dirs.forEach((item) => {
-  del([htmlPath + item]).then(paths => {
+const htmlPath = require('./config').base.htmlPath
+
+module.exports = function clean() {
+  del(htmlPath).then(paths => {
     console.log(paths)
   })
-})
+}
