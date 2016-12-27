@@ -3,7 +3,7 @@ const path = require('path')
 const restc = require('restc')
 require('colors')
 
-const drakovPath = './node_modules/drakov/lib'
+const drakovPath = '../node_modules/drakov/lib'
 const logger = require(`${drakovPath}/logger`)
 const requestUtils = require(`${drakovPath}/middleware/request`)
 const setup = require(`${drakovPath}/setup`)

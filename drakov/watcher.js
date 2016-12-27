@@ -1,7 +1,7 @@
 const gulp = require('gulp')
 require('colors')
 
-const drakov = require('./drakov')
+const drakov = require('./index')
 
 // Save these for replay later
 let CACHED_ARGV = []
